@@ -55,7 +55,7 @@ ui <- fluidPage(
 server <- function(input, output, session) {
     barData <- eventReactive(input$update, {
         county_data %>%
-            filter(County %>% input$county, Year == input$year)
+            filter(County %in% input$county, Year == input$year)
     })
     scatterData <- reactive({
         county_data %>% 
