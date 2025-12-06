@@ -72,7 +72,7 @@ server <- function(input, output, session) {
             x = ~County,
             y = ~Population,
             type = "bar",
-            color = ~county_data
+            color = ~County
         ) %>%
             layout(
                 title = paste("Population of Selected Counties in", input$year),
